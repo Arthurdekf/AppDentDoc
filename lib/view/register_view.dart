@@ -2,7 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 
-class LoginView extends StatelessWidget {
+class RegisterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
@@ -28,14 +28,13 @@ class LoginView extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const SizedBox(height: 10),
               Container(
-                width: 200,
-                height: 200,
-                child: Image.asset('assets/images/loginimg.png'),
+                width: 180,
+                height: 180,
+                child: Image.asset('assets/images/registerimg.png'),
               ),
               const Text(
-                'Bem Vindo(a) ao DentDoc!',
+                'Cadastro DentDoc!',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -44,13 +43,23 @@ class LoginView extends StatelessWidget {
               ),
               const SizedBox(height: 15),
               const Text(
-                'Sua plataforma digital para ensino.',
+                'Crie já sua conta na nossa plataforma digital para ensino.',
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.normal,
                   color: CupertinoColors.systemGrey,
                 ),
                 textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 20),
+              CupertinoTextField(
+                placeholder: 'Nome Completo',
+                keyboardType: TextInputType.emailAddress,
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: CupertinoColors.lightBackgroundGray,
+                  borderRadius: BorderRadius.circular(8),
+                ),
               ),
               const SizedBox(height: 20),
               CupertinoTextField(
@@ -73,28 +82,53 @@ class LoginView extends StatelessWidget {
                 obscureText: true,
               ),
               const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              CupertinoTextField(
+                placeholder: 'Confirme a senha',
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: CupertinoColors.lightBackgroundGray,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                obscureText: true,
+              ),
+              const SizedBox(height: 20),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  GestureDetector(
-                    onTap: () {
-                      // Adicione aqui a lógica para a recuperação da senha
-                    },
-                    child: const Text(
-                      'Esqueci minha senha?',
-                      style: TextStyle(
-                        color: CupertinoColors.activeBlue,
-                        fontSize: 14,
+                  Row(
+                    children: [
+                      CupertinoCheckbox(
+                        value: false,
+                        onChanged: (newValue) {
+                          // Coloque aqui a lógica para quando o checkbox for alterado
+                        },
+                        activeColor: CupertinoColors.black,
                       ),
-                    ),
+                      Expanded(
+                        child: const Text(
+                          'Aceito os termos e políticas de uso.',
+                          style: TextStyle(fontSize: 15),
+                        ),
+                      ),
+                    ],
                   ),
-                  CupertinoButton(
-                    onPressed: () {
-                      // Coloque aqui a lógica de autenticação
-                    },
-                    child: const Text('LOGIN'),                   
-                    color: CupertinoColors.activeBlue,
-                  ),                
+                  Row(
+                    children: [
+                      CupertinoCheckbox(
+                        value: true,
+                        onChanged: (newValue) {
+                          // Coloque aqui a lógica para quando o checkbox for alterado
+                        },
+                        activeColor: CupertinoColors.black,
+                      ),
+                      Expanded(
+                        child: const Text(
+                          'Aceito receber novidades do DentDoc na caixa de E-mail.',
+                          style: TextStyle(fontSize: 15),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
               const SizedBox(height: 20),

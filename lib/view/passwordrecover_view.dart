@@ -2,7 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 
-class LoginView extends StatelessWidget {
+class PasswordRecoverView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
@@ -32,10 +32,10 @@ class LoginView extends StatelessWidget {
               Container(
                 width: 200,
                 height: 200,
-                child: Image.asset('assets/images/loginimg.png'),
+                child: Image.asset('assets/images/passrecoverimg.png'),
               ),
               const Text(
-                'Bem Vindo(a) ao DentDoc!',
+                'Esqueceu sua senha DentDoc?',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -44,7 +44,7 @@ class LoginView extends StatelessWidget {
               ),
               const SizedBox(height: 15),
               const Text(
-                'Sua plataforma digital para ensino.',
+                'Preencha seu E-mail abaixo para receber a recuperação de senha na sua caixa de entrada.',
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.normal,
@@ -63,16 +63,6 @@ class LoginView extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-              CupertinoTextField(
-                placeholder: 'Senha',
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: CupertinoColors.lightBackgroundGray,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                obscureText: true,
-              ),
-              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -81,20 +71,13 @@ class LoginView extends StatelessWidget {
                       // Adicione aqui a lógica para a recuperação da senha
                     },
                     child: const Text(
-                      'Esqueci minha senha?',
+                      'Reenviar E-mail',
                       style: TextStyle(
                         color: CupertinoColors.activeBlue,
                         fontSize: 14,
                       ),
                     ),
-                  ),
-                  CupertinoButton(
-                    onPressed: () {
-                      // Coloque aqui a lógica de autenticação
-                    },
-                    child: const Text('LOGIN'),                   
-                    color: CupertinoColors.activeBlue,
-                  ),                
+                  ),               
                 ],
               ),
               const SizedBox(height: 20),
@@ -102,7 +85,7 @@ class LoginView extends StatelessWidget {
                 onPressed: () {
                   // Coloque aqui a lógica de autenticação
                 },
-                child: const Text('CADASTRO'),
+                child: const Text('RECUPERAR SENHA'),
                 color: CupertinoColors.black,
               ),
             ],

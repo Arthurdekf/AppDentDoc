@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:projetomobile2/view/register_view.dart';
 import 'view/login_view.dart';
-
+import 'view/register_view.dart';
+import 'view/passwordrecover_view.dart';
 
 void main() {
   runApp(
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoApp(
       builder: DevicePreview.appBuilder,
-      home: LoginView(), // Agora chama LoginView em vez de MainApp
+      home: PasswordRecoverView(),
     );
   }
 }
