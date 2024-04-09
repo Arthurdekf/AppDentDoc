@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-class LoginView extends StatelessWidget {
+class AboutUsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
@@ -30,10 +30,10 @@ class LoginView extends StatelessWidget {
               SizedBox(
                 width: 200,
                 height: 200,
-                child: Image.asset('assets/images/loginimg.png'),
+                child: Image.asset('assets/images/aboutimg.png'),
               ),
               const Text(
-                'Bem Vindo(a) ao DentDoc!',
+                'Sobre Nós!',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -42,7 +42,7 @@ class LoginView extends StatelessWidget {
               ),
               const SizedBox(height: 15),
               const Text(
-                'Sua plataforma digital para ensino.',
+                'Somos Arthur Fedeli e João Victor Thomazini fundadores da DentDoc. \n\n Nossa missão é proporcionar uma experiência única de aprendizagem e ensino na área odontológica, tornando o acesso a materiais educacionais de qualidade mais fácil e eficiente. \n\n Obrigado por se juntar a nós nesta jornada. Estamos animados para fazer parte da sua jornada educacional e esperamos que você encontre na DentDoc uma fonte valiosa de recursos e inspiração.',
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.normal,
@@ -50,46 +50,7 @@ class LoginView extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 5),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      // Adicione Logica
-                    },
-                    child: const Text(
-                      'Sobre Nós',
-                      style: TextStyle(
-                        color: CupertinoColors.activeBlue,
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                ],
-              
-              ),
               const SizedBox(height: 25),
-              CupertinoTextField(
-                placeholder: 'E-mail',
-                keyboardType: TextInputType.emailAddress,
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: CupertinoColors.lightBackgroundGray,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-              const SizedBox(height: 15),
-              CupertinoTextField(
-                placeholder: 'Senha',
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: CupertinoColors.lightBackgroundGray,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                obscureText: true,
-              ),
-              const SizedBox(height: 15),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -98,20 +59,25 @@ class LoginView extends StatelessWidget {
                       // Adicione aqui a lógica para a recuperação da senha
                     },
                     child: const Text(
-                      'Esqueci minha senha?',
+                      'Enviar doação',
                       style: TextStyle(
                         color: CupertinoColors.activeBlue,
-                        fontSize: 14,
+                        fontSize: 16,
                       ),
                     ),
                   ),
-                  CupertinoButton(
-                    onPressed: () {
-                      // Coloque aqui a lógica de autenticação
-                    },                   
-                    color: CupertinoColors.activeBlue,
-                    child: const Text('LOGIN'),
-                  ),                
+                  GestureDetector(
+                    onTap: () {
+                      // Adicione aqui a lógica para a recuperação da senha
+                    },
+                    child: const Text(
+                      'Enviar mensagem',
+                      style: TextStyle(
+                        color: CupertinoColors.activeBlue,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),                    
                 ],
               ),
               const SizedBox(height: 25),
@@ -120,7 +86,7 @@ class LoginView extends StatelessWidget {
                   // Coloque aqui a lógica de autenticação
                 },
                 color: CupertinoColors.black,
-                child: const Text('CADASTRO'),
+                child: const Text('VOLTAR'),
               ),
             ],
           ),

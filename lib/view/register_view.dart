@@ -1,5 +1,3 @@
-// ignore_for_file: sort_child_properties_last
-
 import 'package:flutter/cupertino.dart';
 
 class RegisterView extends StatelessWidget {
@@ -28,9 +26,9 @@ class RegisterView extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Container(
-                width: 180,
-                height: 180,
+              SizedBox(
+                width: 200,
+                height: 200,
                 child: Image.asset('assets/images/registerimg.png'),
               ),
               const Text(
@@ -51,7 +49,7 @@ class RegisterView extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 25),
               CupertinoTextField(
                 placeholder: 'Nome Completo',
                 keyboardType: TextInputType.emailAddress,
@@ -61,7 +59,7 @@ class RegisterView extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 15),
               CupertinoTextField(
                 placeholder: 'E-mail',
                 keyboardType: TextInputType.emailAddress,
@@ -71,7 +69,7 @@ class RegisterView extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 15),
               CupertinoTextField(
                 placeholder: 'Senha',
                 padding: const EdgeInsets.all(12),
@@ -81,7 +79,7 @@ class RegisterView extends StatelessWidget {
                 ),
                 obscureText: true,
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 15),
               CupertinoTextField(
                 placeholder: 'Confirme a senha',
                 padding: const EdgeInsets.all(12),
@@ -91,7 +89,7 @@ class RegisterView extends StatelessWidget {
                 ),
                 obscureText: true,
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 15),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
@@ -104,8 +102,8 @@ class RegisterView extends StatelessWidget {
                         },
                         activeColor: CupertinoColors.black,
                       ),
-                      Expanded(
-                        child: const Text(
+                      const Expanded(
+                        child: Text(
                           'Aceito os termos e políticas de uso.',
                           style: TextStyle(fontSize: 15),
                         ),
@@ -121,8 +119,8 @@ class RegisterView extends StatelessWidget {
                         },
                         activeColor: CupertinoColors.black,
                       ),
-                      Expanded(
-                        child: const Text(
+                      const Expanded(
+                        child: Text(
                           'Aceito receber novidades do DentDoc na caixa de E-mail.',
                           style: TextStyle(fontSize: 15),
                         ),
@@ -131,13 +129,13 @@ class RegisterView extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 25),
               CupertinoButton(
                 onPressed: () {
                   // Coloque aqui a lógica de autenticação
                 },
-                child: const Text('CADASTRO'),
                 color: CupertinoColors.black,
+                child: const Text('CADASTRO'),
               ),
             ],
           ),

@@ -1,5 +1,3 @@
-// ignore_for_file: sort_child_properties_last
-
 import 'package:flutter/cupertino.dart';
 
 class PasswordRecoverView extends StatelessWidget {
@@ -29,7 +27,7 @@ class PasswordRecoverView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const SizedBox(height: 10),
-              Container(
+              SizedBox(
                 width: 200,
                 height: 200,
                 child: Image.asset('assets/images/passrecoverimg.png'),
@@ -52,7 +50,7 @@ class PasswordRecoverView extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 25),
               CupertinoTextField(
                 placeholder: 'E-mail',
                 keyboardType: TextInputType.emailAddress,
@@ -62,9 +60,9 @@ class PasswordRecoverView extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 25),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
                     onTap: () {
@@ -74,19 +72,19 @@ class PasswordRecoverView extends StatelessWidget {
                       'Reenviar E-mail',
                       style: TextStyle(
                         color: CupertinoColors.activeBlue,
-                        fontSize: 14,
+                        fontSize: 16,
                       ),
                     ),
                   ),               
                 ],
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 25),
               CupertinoButton(
                 onPressed: () {
                   // Coloque aqui a lógica de autenticação
                 },
-                child: const Text('RECUPERAR SENHA'),
                 color: CupertinoColors.black,
+                child: const Text('RECUPERAR SENHA'),
               ),
             ],
           ),
