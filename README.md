@@ -5,7 +5,7 @@ Um projeto Flutter desenvolvido por:
 
 Arthur Fedeli - 837032
 
-João Victor Thomazini -
+João Victor Thomazini - 837396
 
 ## Tela de Login
 ![login](https://github.com/Arthurdekf/AppDentDoc/assets/84999586/9186ef1c-4a33-4375-9dea-38a2f07bac9c)
